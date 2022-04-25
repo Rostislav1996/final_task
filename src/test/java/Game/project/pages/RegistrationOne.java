@@ -1,7 +1,7 @@
 package Game.project.pages;
 
 import Game.framework.Browser;
-import Game.framework.elements.Write;
+import Game.framework.elements.ButtonElement;
 import Game.utils.ConfigFileReader;
 import org.openqa.selenium.By;
 
@@ -10,13 +10,13 @@ import java.util.concurrent.TimeUnit;
 
 public class RegistrationOne {
     private static ConfigFileReader config = ConfigFileReader.configFileReader;
-    private Write passwordIn = new Write(By.xpath("//input[@placeholder='Choose Password']"), "passwordIn");
-    private Write emailIn = new Write(By.xpath("//input[@placeholder='Your email']"), "emailIn");
-    private Write domainIn = new Write(By.xpath("//input[@placeholder='Domain']"), "domainIn");
-    private Write clickToSecond = new Write(By.xpath("//a[@class='button--secondary']"), "clickToSecond");
-    private Write domainClick = new Write(By.xpath("//div[@class='dropdown__field']"), "domainClick");
-    private Write domainDrop = new Write(By.xpath("//div[@class='dropdown__list-item']"), "domainDrop");
-    private Write clickAccept = new Write(By.xpath("//span[@class='checkbox']"), "clickAccept");
+    private ButtonElement passwordIn = new ButtonElement(By.xpath("//input[@placeholder='Choose Password']"), "passwordIn");
+    private ButtonElement emailIn = new ButtonElement(By.xpath("//input[@placeholder='Your email']"), "emailIn");
+    private ButtonElement domainIn = new ButtonElement(By.xpath("//input[@placeholder='Domain']"), "domainIn");
+    private ButtonElement clickToSecond = new ButtonElement(By.xpath("//a[@class='button--secondary']"), "clickToSecond");
+    private ButtonElement domainClick = new ButtonElement(By.xpath("//div[@class='dropdown__field']"), "domainClick");
+    private ButtonElement domainDrop = new ButtonElement(By.xpath("//div[@class='dropdown__list-item']"), "domainDrop");
+    private ButtonElement clickAccept = new ButtonElement(By.xpath("//span[@class='checkbox']"), "clickAccept");
     private Browser browser = Browser.BROWSER;
 
     public void inputPassword() {

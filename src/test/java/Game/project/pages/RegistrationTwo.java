@@ -1,26 +1,23 @@
 package Game.project.pages;
 
 import Game.framework.Browser;
-import Game.framework.elements.Write;
+import Game.framework.elements.ButtonElement;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.awt.*;
-import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.Random;
 
 public class RegistrationTwo {
     private Browser browser = Browser.BROWSER;
-    private Write clear = new Write(By.xpath("//label[@for='interest_unselectall']"), "clear");
-    private Write choose = new Write(By.xpath("//div[@class='avatar-and-interests__interests-list__item']"), "choose");
-    private Write clickInterest = new Write(By.xpath("//span[@class='checkbox__box']"), "clickInterst");
+    private ButtonElement clear = new ButtonElement(By.xpath("//label[@for='interest_unselectall']"), "clear");
+    private ButtonElement choose = new ButtonElement(By.xpath("//div[@class='avatar-and-interests__interests-list__item']"), "choose");
+    private ButtonElement clickInterest = new ButtonElement(By.xpath("//span[@class='checkbox__box']"), "clickInterst");
 
-    private Write upload = new Write(By.xpath("//a[@class='avatar-and-interests__upload-button']"), "upload");
-    private Write goToThird = new Write(By.xpath("//button[@name='button']"), "goToThird");
+    private ButtonElement upload = new ButtonElement(By.xpath("//a[@class='avatar-and-interests__upload-button']"), "upload");
+    private ButtonElement goToThird = new ButtonElement(By.xpath("//button[@name='button']"), "goToThird");
 
 
     public void chooseInterest() {
