@@ -1,6 +1,5 @@
-package Game.framework;
+package Game.framework.browser;
 
-import Game.framework.browser.BrowserFactory;
 import Game.utils.ConfigFileReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

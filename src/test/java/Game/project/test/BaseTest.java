@@ -1,6 +1,6 @@
 package Game.project.test;
 
-import Game.framework.Browser;
+import Game.framework.browser.Browser;
 import Game.utils.ConfigFileReader;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;

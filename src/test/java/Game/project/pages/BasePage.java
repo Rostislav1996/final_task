@@ -1,6 +1,6 @@
 package Game.project.pages;
 
-import Game.framework.Browser;
+import Game.framework.browser.Browser;
 
 public class BasePage {
     protected Browser browser;

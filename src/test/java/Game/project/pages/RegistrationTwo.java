@@ -1,11 +1,12 @@
 package Game.project.pages;
 
-import Game.framework.Browser;
+import Game.framework.browser.Browser;
 import Game.framework.elements.ButtonElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.awt.*;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.Random;
@@ -47,29 +48,28 @@ public class RegistrationTwo {
             upload.click();
 
             Thread.sleep(5000);
+            StringSelection ss = new StringSelection("C:\\Users\\Rostislav\\Pictures\\Camera Roll\\photo_2022-02-10_00-11-24.jpg");
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss,null);
 
-            Robot robot = new Robot();  // Robot class throws AWT Exception
-            Thread.sleep(1800); // Thread.sleep throws InterruptedException
-            robot.keyPress(KeyEvent.VK_DOWN);  // press arrow down key of keyboard to navigate and select Save radio button
-
-            Thread.sleep(1800);  // sleep has only been used to showcase each event separately
-            robot.keyPress(KeyEvent.VK_TAB);
-            Thread.sleep(1800);
-            robot.keyPress(KeyEvent.VK_TAB);
-            Thread.sleep(1800);
-            robot.keyPress(KeyEvent.VK_TAB);
-            Thread.sleep(1800);
+            Robot robot = new Robot();
+            robot.delay(250);
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_ENTER);
-            // press enter key of keyboard to perform above selected action
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            robot.delay(50);
         }
 
 
     public void gotoThird() {
-
         for (int i = 0; i < goToThird.findElements().size(); i++) {
+            System.out.println(goToThird.findElements().get(i).getText());
             if (goToThird.findElements().get(i).getText().equals("Next")) goToThird.findElements().get(i).click();
             break;
         }
 
     }
 }
+

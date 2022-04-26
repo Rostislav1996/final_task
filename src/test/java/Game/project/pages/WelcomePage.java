@@ -1,6 +1,6 @@
 package Game.project.pages;
 
-import Game.framework.Browser;
+import Game.framework.browser.Browser;
 import Game.framework.elements.ButtonElement;
 import Game.utils.ConfigFileReader;
 import org.openqa.selenium.By;

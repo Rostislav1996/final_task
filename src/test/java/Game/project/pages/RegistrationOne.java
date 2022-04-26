@@ -1,6 +1,6 @@
 package Game.project.pages;
 
-import Game.framework.Browser;
+import Game.framework.browser.Browser;
 import Game.framework.elements.ButtonElement;
 import Game.utils.ConfigFileReader;
 import org.openqa.selenium.By;
@@ -18,6 +18,12 @@ public class RegistrationOne {
     private ButtonElement domainDrop = new ButtonElement(By.xpath("//div[@class='dropdown__list-item']"), "domainDrop");
     private ButtonElement clickAccept = new ButtonElement(By.xpath("//span[@class='checkbox']"), "clickAccept");
     private Browser browser = Browser.BROWSER;
+    public ButtonElement numberOfPage = new ButtonElement(By.xpath("//div[@class='page-indicator']"), "numberOfPage");
+    public ButtonElement cookie = new ButtonElement(By.xpath("//button[@class='button button--solid button--transparent']"), "coockie");
+    public ButtonElement timer = new ButtonElement(By.xpath("//div[@class='timer timer--white timer--center']"), "timer");
+    private ButtonElement helpForm = new ButtonElement(By.xpath("//button[@class='button button--solid button--blue help-form__send-to-bottom-button']"), "helpForm");
+    public ButtonElement hiddenForm = new ButtonElement(By.xpath("//div[@class='help-form is-hidden']"), "hiddenForm");
+
 
     public void inputPassword() {
         passwordIn.clear();
@@ -46,6 +52,10 @@ public class RegistrationOne {
         }
         browser.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
+    public String checkPageFirst(ButtonElement buttonElement) {
+
+        return buttonElement.getText();
+    }
 
     public void acceptTerms() {
         clickAccept.click();
@@ -54,5 +64,11 @@ public class RegistrationOne {
     public void goTosecond() {
         clickToSecond.click();
     }
-}
+    public void clickCookie() {
+        cookie.click();
+    }
 
+    public void clickHelpFOrm() {
+        helpForm.click();
+    }
+}
